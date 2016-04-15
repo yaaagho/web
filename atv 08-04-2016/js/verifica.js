@@ -1,6 +1,7 @@
 //Rafaela Custódio e Yagho Baldansi
 $(document).ready(function(e){
 	$("#dialog-confirm").hide();
+	$(".voltar").hide();
 	$(".menuPrincipal a").click(function(e){
 		e.preventDefault();
 		var href = $(this).attr('href');
@@ -13,13 +14,24 @@ $(document).ready(function(e){
 		$(".conteudo").load(href + " .conteudo");
 		$(".comentario").show();
 		$(".menuPrincipal").show();
+		$(".voltar").hide();
 		} else {
 		$(".conteudo").load(href + " .conteudo");
 		$(".comentario").hide();
 		$(".menuPrincipal").hide();
+		$(".voltar").show();
 		}
  });
+	$(".idBlog a").click(function(e){
+		e.preventDefault();
+		var href = $(this).attr('href');
+		$(".conteudo").load(href + " .conteudo");
+		$(".comentario").show();
+		$(".menuPrincipal").show();
+		$(".voltar").hide();
+ });
 });
+
 function dialogo(){
 	$("#dialog-confirm").dialog({
 		resizable: false,
