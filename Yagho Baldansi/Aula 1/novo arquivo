@@ -1,0 +1,2 @@
+1. Acessar a pasta www (cd /home/www)
+2. chmod -R 777 *
