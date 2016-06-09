@@ -9,7 +9,7 @@
 	var $result;
 
 	function connect(){
-	$this->link = mysql_connect($this->host, $this->user, $this->password);
+	$this->link = mysql_connect($this->host, $this->user, $this->password)
 
 	if(!$this->link){
 	echo "Falha na conexão.<br>";

@@ -19,18 +19,22 @@
 		$estado = $_POST["listEstados"];
 		$dtNasc = $_POST["txtData"];
 		$sexo = $_POST["sexo"];
+
 		if(isset($_POST["checkCinema"]))
 			$cinema = true;
 		else
 			$cinema = false;
+
 		if(isset($_POST["checkMusica"]))
 			$musica = true;
 		else
-			$musica = false;	
+			$musica = false;
+	
 		if(isset($_POST["checkInfo"]))
 			$info = true;
 		else
 			$info = false;
+
 		$login = $_POST["txtLogin"];
 		$senha1 = $_POST["txtSenha1"];
 		$senha2 = $_POST["txtSenha2"];
@@ -86,7 +90,7 @@
 		} else {
 			echo "Data incorreta.<br>";
 			$camposOK = false;
-			}
+		}
 			
 		$cpf = ereg_replace('[^0-9]', '', $cpf);
 		$cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
@@ -119,10 +123,12 @@
 			echo "Erro no envio do arquivo <br>";
 			$camposOK = false;
 		}
+
 		if($arquivo['size']> 100000) {
 			echo "Tamanho maior que o permitido <br>";
 			$camposOk = false;
 		}
+
 		if($arquivo['type']!= "image/gif" && $arquivo['type']!= "image/jpg" &&
 		   $arquivo['type']!= "image/png" && $arquivo['type']!= "image/jpeg"){
 			echo "Tipo de arquivo não permitido <br>";
@@ -134,8 +140,6 @@
 			echo "Erro ao mover o arquivo <br>";
 			$camposOK = false;
 		}		
-		
-		
 	
 		if($camposOK) {
 			echo "<table border='0' cellpading='5'>";

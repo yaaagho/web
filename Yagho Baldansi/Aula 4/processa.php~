@@ -6,7 +6,7 @@
 	$dadosOK = true;
 	$arquivo = $_FILES['txtFoto'];
 	
-	if($arquivo['error'] != 0) {
+	if($arquivo['txtFoto'] != 0) {
 		$dadosOK  = false;
 		echo "Erro no upload do arquivo! <br>";
 	} else if($arquivo['size'] > 1000000) {
